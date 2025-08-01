@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import HomeLayout from './components/Layouts/HomeLayout.tsx'
+// import HomeLayout from './components/Layouts/HomeLayout.tsx'
 import NotFoundPage from './components/pages/NotFoundPage.tsx'
+import LandingPageLayout from './components/Layouts/LandingPageLayouts.tsx'
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <HomeLayout />,
+    element: <LandingPageLayout />,
   }
 ]);
 

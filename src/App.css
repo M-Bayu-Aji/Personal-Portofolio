@@ -26,31 +26,6 @@ body.no-scroll {
 
 /* Navbar */
 
-/* .navbar .navbar-nav a {
-  color: rgb(106, 106, 106);
-  display: inline-block;
-  font-size: 1rem;
-  padding: 10px;
-  margin: 0 0.5rem;
-  font-weight: 700;
-  transition: 0.3s;
-} */
-
-.navbar .navbar-nav a i {
-  font-size: 1.2rem;
-}
-
-.navbar .navbar-nav a:hover {
-  color: #333;
-  background-color: #eee;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.navbar .navbar-extra a {
-  margin: 0 0.5rem;
-}
-
 .navbar .navbar-extra a:hover {
   color: var(--pri);
 }
@@ -58,50 +33,9 @@ body.no-scroll {
 #hamburger {
   display: none;
 }
-
-header .content p {
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-header .image {
-  position: static;
-}
-
-/* .btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #1d4ed8;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  border: none;
-} */
-
-/* .btn:hover,
-.about .btn-ser:hover,
-.certificates .view-btn a:hover, .certificates-content .view-btn a:hover {
-  background-color: #1e40af;
-  text-decoration: underline;
-} */
 /* End Header */
 
 /* About */
-.about {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 40px;
-  background-color: white;
-}
-
-.about-me {
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .about-me img {
   width: 250px;
@@ -111,7 +45,6 @@ header .image {
 .about-text {
   width: auto;
   margin-left: 20px;
-  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .about-text h2 {
@@ -152,6 +85,19 @@ header .image {
   margin-top: 15px;
 }
 /* End About */
+
+.certificate-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-image {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* Sertifikat */
 

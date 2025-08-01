@@ -87,13 +87,13 @@ export default function Navbar() {
             key={index}
             className="text-[rgb(106,106,106)] inline-block text-base p-2.5 mx-2 font-bold transition-all duration-300 ease-in-out hover:text-[#333] hover:bg-[#eee] hover:p-[10px] hover:rounded-md"
           >
-            <i className={item.icon}></i> {item.label}
+            <i className={`${item.icon} text-lg`}></i> {item.label}
           </a>
         ))}
       </div>
 
       <div className="navbar-extra">
-        <a href="#" id="hamburger" ref={hamburger}>
+        <a className="mx-2 h hover:text-[#b6895b] duration-300 ease-in-out" href="#" id="hamburger" ref={hamburger}>
           <i data-feather="menu"></i>
         </a>
       </div>

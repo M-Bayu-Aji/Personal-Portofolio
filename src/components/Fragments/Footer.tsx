@@ -26,7 +26,7 @@ export default function Footer() {
       <footer>
         <div className="container py-8 mx-auto bg-white rounded max-w-7xl">
           <div className="text-center">
-            <p className="text-sm font-bold text-gray-600">© 2025 Muhammad<TextSpan>BayuAji</TextSpan></p>
+            <p className="text-sm font-bold text-gray-600">© {new Date().getFullYear()} Muhammad<TextSpan>BayuAji</TextSpan></p>
 
             <div className="flex justify-center mt-4 space-x-6">
               {sosMed.map((item) => (

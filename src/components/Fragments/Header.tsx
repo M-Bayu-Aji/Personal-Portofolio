@@ -12,12 +12,11 @@ export default function Header() {
         <div className="content">
           <span className="blur"></span>
           <span className="blur"></span>
-          <h1 className="text-[#333] mb-4 text-5xl font-bold leading-[4rem]">
+          <h1 className="text-[#333] font-bricolage mb-4 text-5xl font-bold leading-[4rem]">
             Hi, Saya <TextSpan>BayuAji</TextSpan>, Web Developer
           </h1>
-          <p>
-            Saya seorang Pengembang Web. Saya dapat menyediakan kode yang bersih
-            dan desain UI/UX yang sempurna. Saya juga membuat situs web lebih
+          <p className="text-[#555] mb-8">
+            Saya seorang Pengembang Web. Saya dapat menyediakan kode yang bersih. Saya juga membuat situs web lebih
             interaktif dengan animasi web.
           </p>
           <Button href={"#download"}>
