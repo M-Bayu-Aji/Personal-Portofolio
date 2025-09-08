@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import TextSpan from "../SubAtomic/TeksSpan";
 
 export default function SkillsAndCertifications() {
-  const [hoveredCategory, setHoveredCategory] = useState<number | null>(null);
+  const [, setHoveredCategory] = useState<number | null>(null);
   
   // Refs for scroll animations
   const skillSectionRef = useRef(null);
