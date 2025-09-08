@@ -4,3 +4,92 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Smooth color/background transitions for theme changes */
+:root, .theme-transition {
+	transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+/* Icon swap animation */
+/* Improved icon animation: pop + swivel + settle */
+@keyframes icon-pop-rotate {
+	0% {
+		transform: rotate(-22deg) scale(0.78);
+		opacity: 0;
+	}
+	40% {
+		transform: rotate(18deg) scale(1.18);
+		opacity: 1;
+	}
+	70% {
+		transform: rotate(-6deg) scale(0.96);
+	}
+	100% {
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+.icon-swap-animate {
+	transform-origin: 50% 50%;
+	animation: icon-pop-rotate 420ms cubic-bezier(.2,.85,.25,1);
+}
+
+/* Smooth transitions for SVG fill/stroke and small transform tweaks */
+svg {
+	transition: transform 220ms ease, fill 220ms ease, stroke 220ms ease, opacity 220ms ease;
+}
+svg path {
+	transition: fill 220ms ease, stroke 220ms ease, opacity 220ms ease;
+}
+
+/* Burst effect for icon button */
+.icon-button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	overflow: visible;
+}
+.icon-button::after {
+	content: "";
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0.2);
+	border-radius: 9999px;
+	pointer-events: none;
+	background: radial-gradient(circle at center, rgba(255,255,255,0.85), rgba(255,255,255,0.15) 40%, rgba(255,255,255,0) 60%);
+	opacity: 0;
+}
+.icon-button.icon-swap-animate::after {
+	animation: icon-burst 420ms cubic-bezier(.2,.85,.25,1);
+}
+@keyframes icon-burst {
+	0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0.9; }
+	40% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.65; }
+	100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+}
+
+/* Path draw animation for feather SVG lines */
+.icon-swap-animate svg path,
+.icon-swap-animate svg line,
+.icon-swap-animate svg circle,
+.icon-swap-animate svg polyline,
+.icon-swap-animate svg rect {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: icon-draw 420ms cubic-bezier(.2,.85,.25,1) forwards;
+}
+@keyframes icon-draw {
+	0% { stroke-dashoffset: 1000; opacity: 0.2; }
+	60% { opacity: 1; }
+	100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+/* Slight pop for the svg itself */
+.icon-swap-animate svg {
+	transform-origin: 50% 50%;
+	animation: icon-pop-rotate 420ms cubic-bezier(.2,.85,.25,1);
+}

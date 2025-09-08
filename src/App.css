@@ -16,7 +16,6 @@
 
 body {
   font-family: "Poppins";
-  background-color: #efefea;
   padding: 1.2rem;
 }
 
@@ -37,53 +36,10 @@ body.no-scroll {
 
 /* About */
 
-.about-me img {
-  width: 250px;
-  border-radius: 10px;
-}
-
-.about-text {
-  width: auto;
-  margin-left: 20px;
-}
-
-.about-text h2 {
-  color: #333;
-  font-size: 65px;
-  margin-bottom: 20px;
-  font-weight: 700;
+.borderr{
   border-bottom: 3px solid #1d4ed8;
 }
 
-.about-text h5 {
-  color: #333;
-  letter-spacing: 2px;
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.about-text p {
-  color: #555;
-  letter-spacing: 1px;
-  font-weight: 700;
-  line-height: 28px;
-  font-size: 18px;
-  /* margin-top: 35px; */
-  text-align: justify;
-}
-
-.about .btn-ser {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #1d4ed8;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  margin-top: 15px;
-}
 /* End About */
 
 .certificate-card {
@@ -473,7 +429,6 @@ certificates-content .view-btn a:hover {
     position: absolute;
     top: 0;
     left: -100%;
-    background-color: white;
     width: 25rem;
     height: 100vh;
     transition: 0.3s;
