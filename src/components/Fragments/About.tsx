@@ -34,12 +34,10 @@ export default function About() {
   const [fadingOut, setFadingOut] = useState(false);
 
   // Refs for scroll animations
-  const aboutSectionRef = useRef(null);
   const experienceSectionRef = useRef(null);
   const sertifikatSectionRef = useRef(null);
 
   // Check if sections are in view
-  const isAboutInView = useInView(aboutSectionRef, { once: true, amount: 0.3 });
   const isExperienceInView = useInView(experienceSectionRef, {
     once: true,
     amount: 0.3,
@@ -60,9 +58,9 @@ export default function About() {
     },
     {
       imgSrc: sts,
-      imgAlt: "Internship at PT Shibly Teknologi Solusi",
-      title: "Internship at PT Shibly Teknologi Solusi",
-      description: `Sertifikat penyelesaian program magang sebagai Front End Developer di PT Shibly Teknologi Solusi, di mana saya terlibat dalam pengembangan fitur dan tampilan aplikasi berbasis web, implementasi UI/UX, integrasi API menggunakan Postman dan Swagger, serta membangun antarmuka responsif menggunakan React, Next.js, dan Material UI.`,
+      imgAlt: "Magang PT Shibly Teknologi Solusi",
+      title: "Magang PT Shibly Teknologi Solusi",
+      description: `Sertifikat penyelesaian program magang sebagai Front End Developer di PT Shibly Teknologi Solusi, di mana saya terlibat dalam pengembangan fitur dan tampilan aplikasi berbasis web, integrasi API menggunakan Postman dan Swagger, serta membangun antarmuka responsif menggunakan React, Next.js, dan Material UI.`,
       date: "30 June 2025",
       issuer: "PT Shibly Teknologi Solusi",
     },
@@ -173,11 +171,11 @@ export default function About() {
   const experiences: Experience[] = [
     {
       title: "SMK Wikrama Bogor",
-      role: "Student - Pengembangan Perangkat Lunak dan Gim",
-      period: "2023 - Present",
+      role: "Siswa - Pengembangan Perangkat Lunak dan Gim",
+      period: "June 2023 - April 2026",
       description:
         "Belajar tentang pengembangan perangkat lunak, termasuk pemrograman web, mobile, dan desktop. Fokus pada teknologi front-end dan back-end untuk pembangunan aplikasi yang komprehensif.",
-      skills: ["HTML", "CSS", "JavaScript", "React", "PHP", "Laravel", "MySQL"],
+      skills: ["HTML", "CSS", "JavaScript", "React", "PHP", "Laravel", "MySQL", "Dart", "Flutter"],
       type: "education",
     },
     // {
@@ -193,7 +191,7 @@ export default function About() {
       role: "Front End Developer",
       period: "January 2025 - June 2025",
       description:
-        "Melaksanakan program magang sebagai Front End Developer dengan fokus pada pengembangan fitur dan tampilan aplikasi berbasis web. Terlibat dalam implementasi UI/UX, integrasi API menggunakan Postman dan Swagger, serta membangun antarmuka responsif menggunakan React, Next.js, dan Material UI. Berkontribusi dalam tim untuk meningkatkan kualitas dan performa aplikasi perusahaan.",
+        "Melaksanakan program magang sebagai Front End Developer dengan fokus pada pengembangan fitur dan tampilan aplikasi berbasis web. Terlibat dalam integrasi API menggunakan Postman dan Swagger, serta membangun antarmuka responsif menggunakan React, Next.js, dan Material UI. Berkontribusi dalam tim untuk meningkatkan kualitas dan performa aplikasi perusahaan.",
       skills: ["Next.js", "React", "Material UI", "Postman", "Swagger"],
       type: "internship",
     },
@@ -209,85 +207,94 @@ export default function About() {
       className="flex flex-col p-10 mx-auto bg-white dark:bg-gray-900 gap-14 max-w-7xl"
       id="about"
     >
-      <div
-        ref={aboutSectionRef}
-        className="flex items-center justify-center about-me max-w-7xl"
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-10 lg:py-16 max-w-7xl"
+        id="about"
       >
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={
-            isAboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }
-          }
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative"
-        >
-          <div className="w-full overflow-hidden border-4 border-white shadow-xl md:h-80 md:w-72 rounded-xl dark:border-gray-800">
-            <img
-              className="object-cover object-center w-full h-full"
-              src={PasFoto}
-              alt="Muhammad Bayu Aji"
-            />
-          </div>
-
-          {/* Badge: Open to work */}
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-12">
+          {/* Profile Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, rotate: 6 }}
-            animate={
-              isAboutInView
-                ? { opacity: 1, scale: 1, rotate: 3 }
-                : { opacity: 0, scale: 0.9, rotate: 3 }
-            }
-            transition={{ duration: 0.2 }}
-            whileHover={{ rotate: 0, transition: { duration: 0.2 } }}
-            className="absolute px-4 py-2 mx-auto text-sm font-medium text-white border-2 border-white rounded-full shadow-lg left-20 -bottom-3 w-max bg-gradient-to-r from-blue-600 to-indigo-700 dark:border-gray-800 backdrop-blur-sm"
+            initial={{ opacity: 0, scale: 0.8, x: -50 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="flex flex-col items-center flex-shrink-0 lg:items-start"
           >
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex w-full h-full bg-green-400 rounded-full opacity-75 animate-ping"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-              </span>
-              Terbuka untuk Peluang Kerja! 🚀
+            <div className="relative">
+              <motion.div
+                className="overflow-hidden border-4 border-white shadow-xl h-96 w-96 lg:w-72 lg:h-80 rounded-xl dark:border-gray-800"
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  className="object-cover object-center w-full h-full"
+                  src={PasFoto}
+                  alt="Muhammad Bayu Aji"
+                />
+              </motion.div>
+
+              {/* Badge: Open to work - Improved positioning */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.8, type: "spring", stiffness: 200 }}
+                className="absolute transform -translate-x-1/2 -bottom-4 left-1/2 lg:left-16 lg:transform-none"
+              >
+                <div className="px-3 py-2 text-white transition-transform duration-200 border-2 border-white rounded-full shadow-lg bg-gradient-to-r from-blue-600 to-indigo-700 sm:px-4 dark:border-gray-800 backdrop-blur-sm rotate-3 hover:rotate-0">
+                  <div className="flex items-center gap-2 text-xs font-medium sm:text-sm whitespace-nowrap">
+                    <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5">
+                      <span className="absolute inline-flex w-full h-full bg-green-400 rounded-full opacity-75 animate-ping"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-green-500"></span>
+                    </span>
+                    <span className="hidden sm:inline">Terbuka untuk Peluang Kerja! 🚀</span>
+                    <span className="sm:hidden">Open to Work! 🚀</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={isAboutInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="w-auto ml-5 about-text"
-        >
-          <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="borderr font-bricolage text-[#333] text-7xl mb-5 font-bold dark:text-white border-b-3 border-blue-700 pb-2"
+
+          {/* About Text - Improved spacing and typography */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="flex-1 mt-8 text-center lg:mt-0 lg:text-left"
           >
-            About <TextSpan children="Me" />
-          </motion.h2>
-          <motion.h5
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="font-bold text-[#333] text-2xl tracking-[2px] dark:text-white mb-3"
-          >
-            Web Developer
-          </motion.h5>
-          <motion.p
-            ref={sertifikatRef}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-[#555] tracking-[1px] font-bold leading-7 text-lg text-justify dark:text-gray-300"
-          >
-            Saya adalah seorang Siswa dengan fokus utama pada pengembangan web.
-            Saya dikenal sebagai individu yang pekerja keras, tekun, disiplin,
-            dan berdedikasi tinggi dalam setiap tanggung jawab. Dengan minat
-            mendalam dalam karir sebagai Front End Developer, saya berkomitmen
-            untuk terus meningkatkan keterampilan dan memberikan kontribusi
-            terbaik dalam dunia teknologi.
-          </motion.p>
-        </motion.div>
-      </div>
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl dark:text-white sm:mb-6 font-bricolage"
+            >
+              Tentang <TextSpan>Saya</TextSpan>
+            </motion.h2>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="w-full h-1 mx-auto mb-6 origin-left bg-blue-600 lg:mx-0"
+            ></motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="max-w-3xl mx-auto text-xl leading-relaxed text-justify text-gray-600 dark:text-gray-300 sm:text-base lg:text-lg lg:mx-0"
+            >
+             Sebagai seorang siswa yang menekuni dunia pengembangan web, saya memiliki semangat untuk terus belajar dan beradaptasi dengan teknologi terbaru. Saya percaya bahwa kombinasi antara kerja keras, disiplin, dan kreativitas dapat menghasilkan solusi digital yang bermanfaat. Dengan ketertarikan khusus pada Frontend Development, saya ingin mengembangkan karier dengan menghadirkan website yang tidak hanya berfungsi, tetapi juga memberi pengalaman menyenangkan bagi pengguna.
+            </motion.p>
+          </motion.div>
+        </div>
+      </motion.section>
 
       {/* Experience Section */}
       <motion.section
@@ -306,11 +313,11 @@ export default function About() {
               <i className="text-xl text-blue-600 fas fa-briefcase sm:text-2xl" />
             </div>
             <span className="text-5xl font-bricolage dark:text-white">
-              Experience
+              Pengalaman
             </span>
           </h2>
           <p className="max-w-3xl text-gray-600 dark:text-gray-300">
-            My education and professional journey
+            Perjalanan pendidikan dan karier saya
           </p>
         </div>
 
@@ -347,10 +354,10 @@ export default function About() {
                         }`}
                       >
                         {exp.type === "education"
-                          ? "Education"
+                          ? "Pendidikan"
                           : exp.type === "work"
-                          ? "Work"
-                          : "Internship"}
+                          ? "Pekerjaan"
+                          : "Magang"}
                       </span>
                       <span className="text-sm text-gray-500 dark:text-gray-400">
                         {exp.period}

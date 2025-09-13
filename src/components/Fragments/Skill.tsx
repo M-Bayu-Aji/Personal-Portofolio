@@ -17,7 +17,7 @@ export default function SkillsAndCertifications() {
 
   const skillCategories = [
     {
-      title: "Programming Languages",
+      title: "Bahasa Pmrograman",
       icon: "💻",
       color: "from-blue-500 to-blue-600",
       borderColor: "border-blue-200 dark:border-blue-700",
@@ -43,7 +43,7 @@ export default function SkillsAndCertifications() {
       ],
     },
     {
-      title: "Backend & Tools Development",
+      title: "Backend Development",
       icon: "⚙️",
       color: "from-green-500 to-green-600",
       borderColor: "border-green-200 dark:border-green-700",

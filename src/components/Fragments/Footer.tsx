@@ -64,11 +64,11 @@ export default function Footer() {
 
   const footerSections = {
     pages: [
-      { name: "Home", href: "#header" },
-      { name: "About", href: "#about" },
-      { name: "Skills", href: "#skills" },
-      { name: "Projects", href: "#project" },
-      { name: "Contact", href: "#contact" },
+      { name: "Beranda", href: "#header" },
+      { name: "Tentang", href: "#about" },
+      { name: "Keahlian", href: "#skills" },
+      { name: "Proyek", href: "#project" },
+      { name: "Kontak", href: "#contact" },
     ],
     services: [
       { name: "Web Development", href: "#" },

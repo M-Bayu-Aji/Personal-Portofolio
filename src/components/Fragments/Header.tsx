@@ -79,7 +79,7 @@ export default function Header({ id = "header" }: { id?: string }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative px-6 py-16 mx-auto my-5 overflow-hidden bg-white shadow-sm dark:bg-gray-900 sm:py-24 sm:px-10 rounded-xl dark:shadow-gray-800/10 max-w-7xl"
+      className="relative px-6 py-16 mx-auto my-5 overflow-hidden bg-white shadow-sm dark:bg-gray-900 sm:py-24 sm:px-10 dark:shadow-gray-800/10 max-w-7xl"
       id={id}
     >
       {/* Background Elements */}
@@ -160,14 +160,13 @@ Perkenalkan, saya adalah
               </div>
             </div>
             <p className="max-w-xl mb-8 text-sm font-thin leading-relaxed text-gray-600 sm:text-lg dark:text-gray-300">
-              Saya seorang Pengembang Web dengan fokus pada pengalaman pengguna yang menarik. Saya dapat menyediakan kode yang bersih dan membuat situs web lebih
-              interaktif dengan animasi web.
+              Seorang Frontend Developer yang berfokus pada menciptakan pengalaman pengguna yang menarik melalui desain interaktif dan kode yang rapi.
             </p>
           </div>
           
           <div className="flex items-center gap-6">
             <Button href="/CV_Muhammad_Bayu_Aji.pdf" download="CV_Muhammad_Bayu_Aji.pdf" className="px-8 py-3 text-base font-medium transition-all duration-300 shadow-lg rounded-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1">
-              <i className="mr-2 ri-download-2-line"></i> Download CV
+              <i className="mr-2 ri-download-2-line"></i> Unduh CV
             </Button>
             <button 
               onClick={scrollToContact}

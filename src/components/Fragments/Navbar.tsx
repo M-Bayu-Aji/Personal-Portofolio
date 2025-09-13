@@ -8,11 +8,11 @@ export default function Navbar() {
   const sectionRefs = useContext(SectionRefsContext);
 
   const listNav = [
-    { label: "Home", ref: sectionRefs?.homeRef, icon: "🏠" },
-    { label: "About", ref: sectionRefs?.aboutRef, icon: "👤" },
-    { label: "Skills", ref: sectionRefs?.skillsRef, icon: "⚙️" },
-    { label: "Projects", ref: sectionRefs?.projectsRef, icon: "📁" },
-    { label: "Contact", ref: sectionRefs?.contactRef, icon: "✉️" },
+    { label: "Beranda", ref: sectionRefs?.homeRef, icon: "🏠" },
+    { label: "Tentang", ref: sectionRefs?.aboutRef, icon: "👤" },
+    { label: "Keahlian", ref: sectionRefs?.skillsRef, icon: "⚙️" },
+    { label: "Proyek", ref: sectionRefs?.projectsRef, icon: "📁" },
+    { label: "Kontak", ref: sectionRefs?.contactRef, icon: "✉️" },
   ];
 
   const [isMobile, setIsMobile] = useState(
@@ -327,7 +327,7 @@ export default function Navbar() {
                       {item.icon}
                     </span>
                     <div className="">
-                      <span className="block text-base font-semibold tracking-wide nav-text">
+                      <span className="block text-base font-semibold tracking-wide nav-text dark:text-gray-300">
                         {item.label}
                       </span>
                       <span className="nav-subtext block text-xs text-gray-500 dark:text-gray-400 mt-0.5 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300">
