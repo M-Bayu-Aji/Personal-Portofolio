@@ -71,7 +71,8 @@ const TechIcons = {
   JS: {
     icon: (
       <svg
-        xmlns="http://www.w3.org/2000/svg" className="w-4 h-4"
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-4 h-4"
         viewBox="0 0 256 256"
       >
         <path fill="#F7DF1E" d="M0 0h256v256H0V0Z" />
@@ -109,6 +110,51 @@ const TechIcons = {
       </svg>
     ),
     color: "text-cyan-500",
+  },
+  Laravel: {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg" className="w-4 h-4"
+        viewBox="0 0 256 264"
+      >
+        <path
+          fill="#FF2D20"
+          d="M255.856 59.62c.095.351.144.713.144 1.077v56.568c0 1.478-.79 2.843-2.073 3.578L206.45 148.18v54.18a4.135 4.135 0 0 1-2.062 3.579l-99.108 57.053c-.227.128-.474.21-.722.299c-.093.03-.18.087-.278.113a4.15 4.15 0 0 1-2.114 0c-.114-.03-.217-.093-.325-.134c-.227-.083-.464-.155-.68-.278L2.073 205.938A4.128 4.128 0 0 1 0 202.36V32.656c0-.372.052-.733.144-1.083c.031-.119.103-.227.145-.346c.077-.216.15-.438.263-.639c.077-.134.19-.242.283-.366c.119-.165.227-.335.366-.48c.119-.118.274-.206.408-.309c.15-.124.283-.258.453-.356h.005L51.613.551a4.135 4.135 0 0 1 4.125 0l49.546 28.526h.01c.165.104.305.232.454.351c.134.103.284.196.402.31c.145.149.248.32.371.484c.088.124.207.232.279.366c.118.206.185.423.268.64c.041.118.113.226.144.35c.095.351.144.714.145 1.078V138.65l41.286-23.773V60.692c0-.36.052-.727.145-1.072c.036-.124.103-.232.144-.35c.083-.217.155-.44.268-.64c.077-.134.19-.242.279-.366c.123-.165.226-.335.37-.48c.12-.118.269-.206.403-.309c.155-.124.289-.258.454-.356h.005l49.551-28.526a4.13 4.13 0 0 1 4.125 0l49.546 28.526c.175.103.309.232.464.35c.128.104.278.197.397.31c.144.15.247.32.37.485c.094.124.207.232.28.366c.118.2.185.423.267.64c.047.118.114.226.145.35Zm-8.115 55.258v-47.04l-17.339 9.981l-23.953 13.792v47.04l41.297-23.773h-.005Zm-49.546 85.095V152.9l-23.562 13.457l-67.281 38.4v47.514l90.843-52.3ZM8.259 39.796v160.177l90.833 52.294v-47.505L51.64 177.906l-.015-.01l-.02-.01c-.16-.093-.295-.227-.444-.34c-.13-.104-.279-.186-.392-.3l-.01-.015c-.134-.129-.227-.289-.34-.433c-.104-.14-.227-.258-.31-.402l-.005-.016c-.093-.154-.15-.34-.217-.515c-.067-.155-.154-.3-.196-.464v-.005c-.051-.196-.061-.403-.082-.604c-.02-.154-.062-.309-.062-.464V63.57L25.598 49.772l-17.339-9.97v-.006ZM53.681 8.893L12.399 32.656l41.272 23.762L94.947 32.65L53.671 8.893h.01Zm21.468 148.298l23.948-13.786V39.796L81.76 49.778L57.805 63.569v103.608l17.344-9.986ZM202.324 36.935l-41.276 23.762l41.276 23.763l41.271-23.768l-41.27-23.757Zm-4.13 54.676l-23.953-13.792l-17.338-9.981v47.04l23.948 13.787l17.344 9.986v-47.04Zm-94.977 106.006l60.543-34.564l30.264-17.272l-41.246-23.747l-47.489 27.34l-43.282 24.918l41.21 23.325Z"
+        />
+      </svg>
+    ),
+    color: "text-red-600",
+  },
+  Tailwind: {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" viewBox="0 0 16 16">
+    <path fill="none" stroke="#7dc4e4" stroke-linecap="round" stroke-linejoin="round" d="M8 2.5q-3 0-3.75 3.33C5 4.73 5.88 4.31 6.87 4.58c.58.16.98.62 1.43 1.13c.74.83 1.6 1.79 3.45 1.79q3 0 3.75-3.33c-.75 1.1-1.63 1.52-2.63 1.25c-.57-.16-.97-.62-1.42-1.13C10.7 3.46 9.85 2.5 8 2.5m-3.75 6q-3 0-3.75 3.33c.75-1.1 1.63-1.52 2.63-1.25c.57.16.97.62 1.42 1.13c.74.83 1.6 1.79 3.45 1.79q3 0 3.75-3.33c-.75 1.1-1.63 1.52-2.62 1.25c-.58-.16-.98-.62-1.43-1.13c-.74-.83-1.6-1.79-3.45-1.79"/>
+</svg>
+    ),
+    color: "text-cyan-500",
+  },
+  Jquery: {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        className="w-4 h-4"
+      >
+        <path
+          fill="#0769AD"
+          d="M16 0C7.164 0 0 7.164 0 16s7.164 16 16 16 16-7.164 16-16S24.836 0 16 0zm8.5 16.5c0 4.694-3.806 8.5-8.5 8.5s-8.5-3.806-8.5-8.5 3.806-8.5 8.5-8.5 8.5 3.806 8.5 8.5z"
+        />
+        <path
+          fill="#FFFFFF"
+          d="M16 8.5c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5 6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5zm0 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"
+        />
+        <path
+          fill="#0769AD"
+          d="M16 12c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2z"
+        />
+      </svg>
+    ),
+    color: "text-blue-700",
   },
 };
 
@@ -160,6 +206,25 @@ export default function Project() {
   const projects: ProjectItem[] = [
     {
       id: 1,
+      title: "Sistem E-Commerce",
+      description:
+        "Sistem E-Commerce berbasis Laravel 11 untuk mengelola produk, pesanan, pembayaran, dan pengguna dengan antarmuka modern serta backend yang kuat.",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: [
+        {
+          name: "Laravel",
+          icon: TechIcons.Laravel.icon,
+          color: TechIcons.Laravel.color,
+        },
+        { name: "Tailwind", icon: TechIcons.Tailwind.icon, color: TechIcons.Tailwind.color },
+        { name: "Jquery", icon: TechIcons.Jquery.icon, color: TechIcons.Jquery.color },
+      ],
+      sourceUrl: "https://github.com/M-Bayu-Aji/Sistem-E-Commerce-Laravel",
+      category: "Business Platform",
+    },
+    {
+      id: 2,
       title: "IMT Calculator",
       description:
         "Aplikasi modern untuk menghitung Indeks Massa Tubuh dengan rekomendasi kesehatan personal dan visualisasi data yang interaktif.",
@@ -179,102 +244,10 @@ export default function Project() {
       category: "Web App",
     },
     {
-      id: 2,
-      title: "Shell Fuel Management",
-      description:
-        "Sistem manajemen bahan bakar terintegrasi dengan dashboard analytics real-time dan pelaporan otomatis untuk optimasi operasional.",
-      image:
-        "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: [
-        {
-          name: "HTML",
-          icon: TechIcons.HTML.icon,
-          color: TechIcons.HTML.color,
-        },
-        {
-          name: "Bootstrap",
-          icon: TechIcons.Bootstrap.icon,
-          color: TechIcons.Bootstrap.color,
-        },
-        { name: "PHP", icon: TechIcons.PHP.icon, color: TechIcons.PHP.color },
-      ],
-      liveUrl: "http://www.bayuajiys.byethost32.com/Bahan_Bakar/",
-      category: "Management System",
-    },
-    {
       id: 3,
-      title: "Smart Rental Motor",
+      title: "Modern E-Commerce Design",
       description:
-        "Platform rental motor dengan sistem booking intelligent, manajemen fleet otomatis, dan integrasi payment gateway untuk pengalaman seamless.",
-      image:
-        "https://images.unsplash.com/photo-1558981285-6f0c94958bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: [
-        {
-          name: "HTML",
-          icon: TechIcons.HTML.icon,
-          color: TechIcons.HTML.color,
-        },
-        {
-          name: "Bootstrap",
-          icon: TechIcons.Bootstrap.icon,
-          color: TechIcons.Bootstrap.color,
-        },
-        { name: "PHP", icon: TechIcons.PHP.icon, color: TechIcons.PHP.color },
-      ],
-      liveUrl: "http://www.bayuajiys.byethost32.com/Rental_Motor/",
-      category: "Business Platform",
-    },
-    {
-      id: 4,
-      title: "Student Data Hub",
-      description:
-        "Sistem manajemen data siswa dengan AI-powered analytics, tracking akademik real-time, dan dashboard interaktif untuk pendidik modern.",
-      image:
-        "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: [
-        {
-          name: "HTML",
-          icon: TechIcons.HTML.icon,
-          color: TechIcons.HTML.color,
-        },
-        {
-          name: "Bootstrap",
-          icon: TechIcons.Bootstrap.icon,
-          color: TechIcons.Bootstrap.color,
-        },
-        { name: "PHP", icon: TechIcons.PHP.icon, color: TechIcons.PHP.color },
-      ],
-      liveUrl: "http://www.bayuajiys.byethost32.com/Data_Siswa/",
-      category: "Management System",
-    },
-    {
-      id: 5,
-      title: "Advanced POS System",
-      description:
-        "Sistem point of sale modern dengan inventory management, sales analytics, dan multi-payment integration untuk bisnis retail masa depan.",
-      image:
-        "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: [
-        {
-          name: "HTML",
-          icon: TechIcons.HTML.icon,
-          color: TechIcons.HTML.color,
-        },
-        {
-          name: "Bootstrap",
-          icon: TechIcons.Bootstrap.icon,
-          color: TechIcons.Bootstrap.color,
-        },
-        { name: "PHP", icon: TechIcons.PHP.icon, color: TechIcons.PHP.color },
-      ],
-      liveUrl: "http://www.bayuajiys.byethost32.com/Kasir/",
-      category: "Business Platform",
-    },
-    {
-      id: 6,
-      title: "Modern E-Commerce",
-      description:
-        "E-commerce platform dengan React architecture, responsive design, dan UX yang dioptimalkan untuk konversi tinggi dan engagement maksimal.",
+        "E-commerce Design platform dengan React architecture, responsive design, dan UX yang dioptimalkan untuk konversi tinggi dan engagement maksimal.",
       image:
         "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: [
@@ -285,9 +258,9 @@ export default function Project() {
         },
         { name: "CSS", icon: TechIcons.CSS.icon, color: TechIcons.CSS.color },
         {
-          name: "React",
-          icon: TechIcons.React.icon,
-          color: TechIcons.React.color,
+          name: "JS",
+          icon: TechIcons.JS.icon,
+          color: TechIcons.JS.color,
         },
       ],
       liveUrl: "https://m-bayu-aji.github.io/WebShop/",

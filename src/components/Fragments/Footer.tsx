@@ -315,10 +315,10 @@ export default function Footer() {
                         Email
                       </h4>
                       <a
-                        href="mailto:muhammadbayuajisutisnapurta@gmail.com"
+                        href="mailto:baa7uaajii@gmail.com"
                         className="mt-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
                       >
-                        muhammadbayuajisutisnapurta@gmail.com
+                        baa7uaajii@gmail.com
                       </a>
                     </div>
                   </div>
@@ -345,10 +345,10 @@ export default function Footer() {
                         Telepon
                       </h4>
                       <a
-                        href="tel:+6281234567890"
+                        href="tel:+6289639126178"
                         className="mt-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
                       >
-                        +62 812-3456-7890
+                        +62 896-3912-6178
                       </a>
                     </div>
                   </div>

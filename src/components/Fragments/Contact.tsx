@@ -91,8 +91,8 @@ export default function Contact() {
         </svg>
       ),
       title: "Email",
-      value: "muhammadbayuajisutisnapurta@gmail.com",
-      link: "mailto:muhammadbayuajisutisnapurta@gmail.com",
+      value: "baa7uaajii@gmail.com",
+      link: "mailto:baa7uaajii@gmail.com",
       gradient: "from-blue-600 to-indigo-600"
     },
     {
