@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { SectionRefsContext } from "../Layouts/LandingPageLayouts";
 import TextSpan from "../SubAtomic/TeksSpan";
@@ -190,6 +190,23 @@ export default function Project() {
     window.scrollTo({ top, behavior: "smooth" });
   };
 
+  // ESC key handler to close modal
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && selectedProject) {
+        setSelectedProject(null);
+      }
+    };
+
+    if (selectedProject) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
+
   // Check if sections are in view
   const isProjectInView = useInView(projectSectionRef, {
     once: true,
@@ -225,6 +242,25 @@ export default function Project() {
     },
     {
       id: 2,
+      title: "Pengaduan Masyarakat",
+      description:
+        "Sistem Pengaduan Masyarakat berbasis digital untuk melaporkan masalah sosial, kejahatan, dan pembangunan dengan antarmuka intuitif serta proses yang efisien.",
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: [
+        {
+          name: "Laravel",
+          icon: TechIcons.Laravel.icon,
+          color: TechIcons.Laravel.color,
+        },
+        { name: "Tailwind", icon: TechIcons.Tailwind.icon, color: TechIcons.Tailwind.color },
+        { name: "Jquery", icon: TechIcons.Jquery.icon, color: TechIcons.Jquery.color },
+      ],
+      sourceUrl: "https://github.com/M-Bayu-Aji/Pengaduan-Masyarakat",
+      category: "Management System",
+    },
+    {
+      id: 3,
       title: "IMT Calculator",
       description:
         "Aplikasi modern untuk menghitung Indeks Massa Tubuh dengan rekomendasi kesehatan personal dan visualisasi data yang interaktif.",
@@ -244,7 +280,7 @@ export default function Project() {
       category: "Web App",
     },
     {
-      id: 3,
+      id: 4,
       title: "Modern E-Commerce Design",
       description:
         "E-commerce Design platform dengan React architecture, responsive design, dan UX yang dioptimalkan untuk konversi tinggi dan engagement maksimal.",
@@ -888,78 +924,52 @@ export default function Project() {
                       {selectedProject.id === 1 && (
                         <>
                           <span className="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-md dark:bg-green-900/30 dark:text-green-400">
-                            Health Analytics
+                            Product Management
                           </span>
                           <span className="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-md dark:bg-blue-900/30 dark:text-blue-400">
-                            BMI Calculator
+                            Order Processing
                           </span>
                           <span className="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-md dark:bg-purple-900/30 dark:text-purple-400">
-                            Recommendations
+                            Payment Integration
                           </span>
                         </>
                       )}
                       {selectedProject.id === 2 && (
                         <>
                           <span className="px-2 py-1 text-xs text-yellow-800 bg-yellow-100 rounded-md dark:bg-yellow-900/30 dark:text-yellow-400">
-                            Real-time Tracking
+                            Complaint Submission
                           </span>
                           <span className="px-2 py-1 text-xs text-red-800 bg-red-100 rounded-md dark:bg-red-900/30 dark:text-red-400">
-                            Analytics Dashboard
+                            Admin Dashboard
                           </span>
                           <span className="px-2 py-1 text-xs text-indigo-800 bg-indigo-100 rounded-md dark:bg-indigo-900/30 dark:text-indigo-400">
-                            Reporting
+                            Report Generation
                           </span>
                         </>
                       )}
                       {selectedProject.id === 3 && (
                         <>
                           <span className="px-2 py-1 text-xs rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400">
-                            Smart Booking
+                            BMI Calculation
                           </span>
                           <span className="px-2 py-1 text-xs text-orange-800 bg-orange-100 rounded-md dark:bg-orange-900/30 dark:text-orange-400">
-                            Fleet Management
+                            Health Recommendations
                           </span>
                           <span className="px-2 py-1 text-xs text-pink-800 bg-pink-100 rounded-md dark:bg-pink-900/30 dark:text-pink-400">
-                            Payment Gateway
+                            Interactive UI
                           </span>
                         </>
                       )}
                       {selectedProject.id === 4 && (
                         <>
                           <span className="px-2 py-1 text-xs rounded-md bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-400">
-                            Student Analytics
-                          </span>
-                          <span className="px-2 py-1 text-xs rounded-md bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-400">
-                            Academic Tracking
-                          </span>
-                          <span className="px-2 py-1 text-xs rounded-md bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400">
-                            Interactive Dashboard
-                          </span>
-                        </>
-                      )}
-                      {selectedProject.id === 5 && (
-                        <>
-                          <span className="px-2 py-1 text-xs text-teal-800 bg-teal-100 rounded-md dark:bg-teal-900/30 dark:text-teal-400">
-                            POS System
-                          </span>
-                          <span className="px-2 py-1 text-xs rounded-md bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
-                            Inventory Control
-                          </span>
-                          <span className="px-2 py-1 text-xs rounded-md bg-lime-100 text-lime-800 dark:bg-lime-900/30 dark:text-lime-400">
-                            Sales Analytics
-                          </span>
-                        </>
-                      )}
-                      {selectedProject.id === 6 && (
-                        <>
-                          <span className="px-2 py-1 text-xs rounded-md bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-400">
-                            React Architecture
-                          </span>
-                          <span className="px-2 py-1 text-xs text-indigo-800 bg-indigo-100 rounded-md dark:bg-indigo-900/30 dark:text-indigo-400">
                             Responsive Design
                           </span>
-                          <span className="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-md dark:bg-purple-900/30 dark:text-purple-400">
-                            Modern UX
+                          <span className="px-2 py-1 text-xs rounded-md bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-400">
+                            Product Showcase
+                          </span>
+                          <span className="px-2 py-1 text-xs rounded-md bg-rose-100 text-rose-800 dark:bg-rose-900/30 dark:text-rose-400">
+                            Shopping Cart
                           </span>
                         </>
                       )}
